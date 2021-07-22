@@ -48,6 +48,38 @@ int main(){
         cout<<"Mango is lexi greater than Apple."<<endl;
     }
 
+    // Find Substrings.
+    string s = "I want to have apple juice";
+    cout<<s<<endl;
+    int idx = s.find("apple");
+
+    cout<<idx<<endl;
+
+
+    // Remove word from string.
+    string word = "apple";
+    int len = word.length();
+    s.erase(idx, len+1); //+1 to remove extra space
+    cout<<s<<endl;
+
+    // Iterate over all characters in a string
+    for(int i = 0; i<s1.length();i++){
+        cout<<s1[i]<<":";
+    }
+    cout<<endl;
+
+    // Iterators
+    for(string::iterator it = s1.begin(); it!=s1.end(); it++){
+        cout<<(*it)<<",";
+    }
+
+    cout<<endl;
+
+    // for each loop
+    for(char c:s1){
+        cout<<c<<".";
+    }
+    cout<<endl;
 
     return 0;
 }
