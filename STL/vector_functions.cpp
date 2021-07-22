@@ -65,7 +65,43 @@ int main(){
     }
     cout<<d.size()<<endl;
 
-    
+    d.push_back(10);
+    d.push_back(11);
+    d.push_back(12);
+
+    //{10,11,12}
+
+    // Front: Gives first element. Back: gives last element
+
+    cout<<"Front: "<<d.front()<<endl;
+    cout<<"Back: "<<d.back()<<endl;
+
+    // Reserve
+    int n;
+    cout<<"Enter number of elements:";
+    cin>>n;
+
+    vector<int> v;
+
+    // To avoid memory doubling, we use reserve function
+    v.reserve(1000);
+    for(int i = 0;i<n;i++){
+        int no;
+        cin>>no;
+        v.push_back(no);
+        cout<<"Changing Capacity:"<<v.capacity()<<endl;
+    }
+
+    cout<<"Capacity:"<<v.capacity()<<endl; // Before reserve: for 5 elements, capacity was 8
+
+    for(int x:v){
+        cout<<x<<" ";
+    }
+    cout<<endl; 
+
+
+
+
 
     return 0;
 }
